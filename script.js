@@ -811,12 +811,12 @@ function mostrarPregunta() {
     barraProgreso.style.width = `${((indiceActual + 1) / CONFIG.preguntasPorExamen) * 100}%`;
 
     contenedorPregunta.innerHTML = `
-        <h3 class="question-text">${pregunta.pregunta.replace(/\n/g, '<br>')}</h3>
+        <h3 class="question-text">${escapeHTML(pregunta.pregunta).replace(/\n/g, '<br>')}</h3>
         <div class="options-list">
             ${pregunta.opciones.map((opcion, i) => `
                 <div class="option ${respuestasUsuario[indiceActual] === i ? 'selected' : ''}" onclick="seleccionarRespuesta(${i})">
                     <div class="option-indicator"></div>
-                    <span class="option-label">${opcion}</span>
+                    <span class="option-label">${escapeHTML(opcion)}</span>
                 </div>
             `).join('')}
         </div>
@@ -906,13 +906,13 @@ function mostrarRevisionDetallada() {
             <div class="status-tag ${fueCorrecta ? 'correct' : 'incorrect'}">
                 ${fueCorrecta ? '✓ Correcta' : '✗ Incorrecta'}
             </div>
-            <div class="revision-q">${i + 1}. ${pregunta.pregunta.replace(/\n/g, '<br>')}</div>
+            <div class="revision-q">${i + 1}. ${escapeHTML(pregunta.pregunta).replace(/\n/g, '<br>')}</div>
             <div class="revision-ans">
-                <span class="user-ans ${!fueCorrecta ? 'wrong' : ''}">Tu respuesta: ${textoUsuario}</span>
+                <span class="user-ans ${!fueCorrecta ? 'wrong' : ''}">Tu respuesta: ${escapeHTML(textoUsuario)}</span>
             </div>
             ${!fueCorrecta ? `
                 <div class="revision-ans">
-                    <span class="correct-ans">Respuesta correcta: ${textoCorrecto}</span>
+                    <span class="correct-ans">Respuesta correcta: ${escapeHTML(textoCorrecto)}</span>
                 </div>
             ` : ''}
         `;
@@ -943,3 +943,9 @@ function cambiarPantalla(actual, siguiente) {
         }, 50);
     }, 500);
 }
+
+function escapeHTML(str) {
+    if (!str) return '';
+    const div = document.createElement('div');
+    div.textContent = str;
+    ret
