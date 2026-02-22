@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Examen - Lenguajes de Interfaz</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <div class="scanline"></div>
+
+    <main class="container">
+        <!-- Pantalla de Inicio -->
+        <section id="pantalla-inicio" class="screen active">
+            <div class="tech-card">
+                <div class="header-glitch">
+                    <h1 class="main-title">SIMULADOR <span class="accent">EXAMEN</span></h1>
+                </div>
+                <h2 class="sub-title">Lenguajes y Autómatas II – Compiladores</h2>
+                <div class="info-box">
+                    <p>Bienvenido al simulador técnico. Esta herramienta evaluará tus conocimientos sobre:</p>
+                    <ul>
+                        <li>Análisis semántico y chequeo de tipos</li>
+                        <li>Gestión de la Tabla de Símbolos y ámbitos</li>
+                        <li>Gramáticas de atributos y acciones semánticas</li>
+                        <li>Análisis de código (Java, Python, PHP)</li>
+                    </ul>
+                    <p class="stats-info">25 preguntas seleccionadas aleatoriamente de un banco de 70.</p>
+                </div>
+                <button id="btn-iniciar" class="btn btn-primary pulse">INICIAR SIMULACIÓN</button>
+            </div>
+        </section>
+
+        <!-- Pantalla de Examen -->
+        <section id="pantalla-examen" class="screen">
+            <div class="tech-card exam-container">
+                <div class="exam-header">
+                    <div class="progress-container">
+                        <div class="progress-text">Progreso: <span id="indicador-progreso">1/20</span></div>
+                        <div class="progress-bar-bg">
+                            <div id="barra-progreso" class="progress-bar-fill"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="contenedor-pregunta" class="question-fade">
+                    <!-- Dinámico -->
+                </div>
+
+                <div class="nav-buttons">
+                    <button id="btn-anterior" class="btn btn-secondary">ANTERIOR</button>
+                    <button id="btn-finalizar-ya" class="btn btn-accent">FINALIZAR AHORA</button>
+                    <button id="btn-siguiente" class="btn btn-primary">SIGUIENTE</button>
+                    <button id="btn-finalizar" class="btn btn-accent hidden">TERMINAR EXAMEN</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pantalla de Resultados -->
+        <section id="pantalla-resultados" class="screen">
+            <div class="tech-card results-container">
+                <h2 class="results-title">RESULTADOS DEL ANÁLISIS</h2>
+                <div class="score-circle">
+                    <svg viewBox="0 0 36 36" class="circular-chart">
+                        <path class="circle-bg"
+                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <path id="circle-progress" class="circle" stroke-dasharray="0, 100"
+                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    </svg>
+                    <div class="percentage-text"><span id="calificacion">0</span>%</div>
+                </div>
+                <div class="score-details">
+                    <p>Aciertos totales: <span id="aciertos" class="accent">0</span> de <span
+                            id="total-preguntas">20</span></p>
+                    <h3 id="mensaje-dinamico" class="dynamic-msg">Calculando...</h3>
+                </div>
+                <div class="results-actions">
+                    <button id="btn-revisar" class="btn btn-accent">REVISAR RESPUESTAS</button>
+                    <button id="btn-reiniciar" class="btn btn-primary">NUEVO SIMULACRO</button>
+                </div>
+            </div>
+
+            <!-- Contenedor de Revisión (aparecerá debajo de los resultados) -->
+            <div id="contenedor-revision" class="tech-card revision-container hidden">
+                <h3 class="revision-title">DESGLOSE TÉCNICO</h3>
+                <div id="lista-revision"></div>
+                <button id="btn-subir" class="btn btn-secondary"
+                    onclick="window.scrollTo({top: 0, behavior: 'smooth'})">VOLVER ARRIBA</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
