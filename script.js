@@ -460,7 +460,7 @@ const BANCO_PREGUNTAS = [
 
     // --- EJEMPLOS DE CÓDIGO (46-70): Semántica y Sintaxis en Java, Python, PHP ---
     {
-        pregunta: "Java: ¿Qué error genera 'int a = true;'?",
+        pregunta: "Java: ¿Qué error genera?\n\nCódigo:\n\nint a = true;",
         opciones: [
             "Incompatible types: boolean cannot be converted to int",
             "Syntax Error: missing semicolon",
@@ -470,7 +470,7 @@ const BANCO_PREGUNTAS = [
         correcta: 0
     },
     {
-        pregunta: "Python: ¿Qué sucede al ejecutar 'print(x + 5)' si x no fue declarada?",
+        pregunta: "Python: ¿Qué sucede al ejecutar el siguiente código si x no fue declarada?\n\nCódigo:\n\nprint(x + 5)",
         opciones: [
             "Imprime 5",
             "NameError: name 'x' is not defined",
@@ -480,7 +480,7 @@ const BANCO_PREGUNTAS = [
         correcta: 1
     },
     {
-        pregunta: "PHP: ¿Qué resultado da 'echo \"5\" * 2;'?",
+        pregunta: "PHP: ¿Qué resultado da?\n\nCódigo:\n\necho \"5\" * 2;",
         opciones: [
             "\"55\"",
             "10",
@@ -490,7 +490,7 @@ const BANCO_PREGUNTAS = [
         correcta: 1
     },
     {
-        pregunta: "Python: ¿Qué imprime 'type(3.14)'?",
+        pregunta: "Python: ¿Qué imprime?\n\nCódigo:\n\ntype(3.14)",
         opciones: [
             "<class 'int'>",
             "<class 'float'>",
@@ -500,7 +500,7 @@ const BANCO_PREGUNTAS = [
         correcta: 1
     },
     {
-        pregunta: "Java: ¿Qué ocurre con 'String s = 5;'?",
+        pregunta: "Java: ¿Qué ocurre con el siguiente código?\n\nCódigo:\n\nString s = 5;",
         opciones: [
             "s vale \"5\"",
             "Error: incompatible types: int cannot be converted to String",
@@ -510,7 +510,7 @@ const BANCO_PREGUNTAS = [
         correcta: 1
     },
     {
-        pregunta: "PHP: ¿Qué hace '$a = \"saludo\"; $$a = \"hola\"; echo $saludo;'?",
+        pregunta: "PHP: ¿Qué hace el siguiente código?\n\nCódigo:\n\n$a = \"saludo\";\n$$a = \"hola\";\necho $saludo;",
         opciones: [
             "Imprime \"saludo\"",
             "Imprime \"hola\"",
@@ -520,7 +520,7 @@ const BANCO_PREGUNTAS = [
         correcta: 1
     },
     {
-        pregunta: "Python: Dado 'd = {\"a\": 1}; print(d[\"b\"])', ¿qué error es?",
+        pregunta: "Python: Dado el siguiente código, ¿qué error es?\n\nCódigo:\n\nd = {\"a\": 1}\nprint(d[\"b\"])",
         opciones: [
             "SyntaxError",
             "KeyError (Semántico dinámico)",
@@ -530,7 +530,7 @@ const BANCO_PREGUNTAS = [
         correcta: 1
     },
     {
-        pregunta: "Java: ¿Es válido 'float f = 3.14;'?",
+        pregunta: "Java: ¿Es válido?\n\nCódigo:\n\nfloat f = 3.14;",
         opciones: [
             "Sí, compila perfectamente",
             "No, requiere sufijo 'f' (3.14f) porque 3.14 es double",
@@ -540,7 +540,7 @@ const BANCO_PREGUNTAS = [
         correcta: 1
     },
     {
-        pregunta: "Python: ¿Qué devuelve '\"G\" + 1'?",
+        pregunta: "Python: ¿Qué devuelve?\n\nCódigo:\n\n\"G\" + 1",
         opciones: [
             "\"G1\"",
             "TypeError: can only concatenate str (not \"int\") to str",
@@ -550,7 +550,7 @@ const BANCO_PREGUNTAS = [
         correcta: 1
     },
     {
-        pregunta: "PHP: ¿Qué imprime '$x = 10; function f() { echo $x; } f();'?",
+        pregunta: "PHP: ¿Qué imprime el código?\n\nCódigo:\n\n$x = 10;\nfunction f() {\n    echo $x;\n}\nf();",
         opciones: [
             "10",
             "Un error o aviso de variable indefinida (por ámbito)",
@@ -560,7 +560,7 @@ const BANCO_PREGUNTAS = [
         correcta: 1
     },
     {
-        pregunta: "Java: En 'final int c = 5; c = 10;', el error es detectado por:",
+        pregunta: "Java: En el siguiente código, el error es detectado por:\n\nCódigo:\n\nfinal int c = 5;\nc = 10;",
         opciones: [
             "Analizador Léxico",
             "Analizador Sintáctico",
@@ -570,7 +570,7 @@ const BANCO_PREGUNTAS = [
         correcta: 2
     },
     {
-        pregunta: "Python: ¿Cuál es el resultado de '3 == \"3\"'?",
+        pregunta: "Python: ¿Cuál es el resultado?\n\nCódigo:\n\n3 == \"3\"",
         opciones: [
             "True",
             "False",
@@ -580,7 +580,7 @@ const BANCO_PREGUNTAS = [
         correcta: 1
     },
     {
-        pregunta: "Java: ¿Qué imprime 'System.out.println(10 / 4);'?",
+        pregunta: "Java: ¿Qué imprime?\n\nCódigo:\n\nSystem.out.println(10 / 4);",
         opciones: [
             "2.5",
             "2 (División entera)",
@@ -600,7 +600,7 @@ const BANCO_PREGUNTAS = [
         correcta: 1
     },
     {
-        pregunta: "Java: ¿Qué sucede en 'int[] arr = {1, 2}; System.out.println(arr[2]);'?",
+        pregunta: "Java: ¿Qué sucede en este caso?\n\nCódigo:\n\nint[] arr = {1, 2};\nSystem.out.println(arr[2]);",
         opciones: [
             "Imprime 0",
             "ArrayIndexOutOfBoundsException (Error dinámico)",
@@ -610,7 +610,7 @@ const BANCO_PREGUNTAS = [
         correcta: 1
     },
     {
-        pregunta: "Python: ¿Qué hace 'global x' dentro de una función?",
+        pregunta: "Python: ¿Qué hace la siguiente instrucción dentro de una función?\n\nCódigo:\n\nglobal x",
         opciones: [
             "Crea una copia de la variable x",
             "Indica que la función usará la variable x del ámbito global",
@@ -620,7 +620,7 @@ const BANCO_PREGUNTAS = [
         correcta: 1
     },
     {
-        pregunta: "Java: 'void miMetodo() { return 10; }' falla porque:",
+        pregunta: "Java: ¿Por qué falla el siguiente segmento?\n\nCódigo:\n\nvoid miMetodo() {\n    return 10;\n}",
         opciones: [
             "Le faltan los parámetros",
             "Un método 'void' no puede retornar valores",
@@ -630,7 +630,7 @@ const BANCO_PREGUNTAS = [
         correcta: 1
     },
     {
-        pregunta: "PHP: '$x = true; if($x == 1) echo \"igual\";' imprime:",
+        pregunta: "PHP: ¿Qué imprime el siguiente código?\n\nCódigo:\n\n$x = true;\nif($x == 1) echo \"igual\";",
         opciones: [
             "Nada",
             "\"igual\" (debido a la coerción de tipos)",
@@ -640,7 +640,7 @@ const BANCO_PREGUNTAS = [
         correcta: 1
     },
     {
-        pregunta: "Python: ¿Qué imprime 'print(len([1, 2, 3]))'?",
+        pregunta: "Python: ¿Qué imprime?\n\nCódigo:\n\nprint(len([1, 2, 3]))",
         opciones: [
             "3",
             "1",
@@ -660,7 +660,7 @@ const BANCO_PREGUNTAS = [
         correcta: 0
     },
     {
-        pregunta: "PHP: 'function suma(int $a, int $b): int { ... }' define:",
+        pregunta: "PHP: ¿Qué define la siguiente firma?\n\nCódigo:\n\nfunction suma(int $a, int $b): int { ... }",
         opciones: [
             "Tipado estricto para argumentos y retorno",
             "Un error de sintaxis en PHP",
@@ -670,7 +670,7 @@ const BANCO_PREGUNTAS = [
         correcta: 0
     },
     {
-        pregunta: "Python: ¿Qué sucede con 'x = 10; x = \"diez\"'?",
+        pregunta: "Python: ¿Qué sucede con estas asignaciones?\n\nCódigo:\n\nx = 10;\nx = \"diez\";",
         opciones: [
             "Error de tipos",
             "x cambia su tipo dinámicamente a string",
@@ -680,7 +680,7 @@ const BANCO_PREGUNTAS = [
         correcta: 1
     },
     {
-        pregunta: "Java: ¿Qué error hay en 'public class A { public void a() {} public void a() {} }'?",
+        pregunta: "Java: ¿Qué error hay en la siguiente clase?\n\nCódigo:\n\npublic class A {\n    public void a() {}\n    public void a() {}\n}",
         opciones: [
             "Ninguno, se sobrecargan",
             "Method a() is already defined (Duplicación de firma en el mismo ámbito)",
@@ -690,7 +690,7 @@ const BANCO_PREGUNTAS = [
         correcta: 1
     },
     {
-        pregunta: "PHP: ¿Qué imprime 'echo (5 > 3) ? \"si\" : \"no\";'?",
+        pregunta: "PHP: ¿Qué imprime?\n\nCódigo:\n\necho (5 > 3) ? \"si\" : \"no\";",
         opciones: [
             "\"si\"",
             "\"no\"",
@@ -700,7 +700,7 @@ const BANCO_PREGUNTAS = [
         correcta: 0
     },
     {
-        pregunta: "Java: 'byte b = 128;' genera error porque:",
+        pregunta: "Java: ¿Por qué el código genera un error?\n\nCódigo:\n\nbyte b = 128;",
         opciones: [
             "El número es par",
             "El rango de byte es -128 a 127 (desbordamiento detectado semánticamente)",
@@ -708,6 +708,140 @@ const BANCO_PREGUNTAS = [
             "Falta inicializar b"
         ],
         correcta: 1
+    },
+
+    // --- NUEVAS PREGUNTAS (Banco Externo) ---
+    {
+        pregunta: "¿Cuál de las siguientes situaciones representa un conflicto semántico relacionado con tipos?",
+        opciones: [
+            "Uso incorrecto de paréntesis en una expresión",
+            "Definir una producción gramatical ambigua",
+            "Falta de una palabra reservada",
+            "Aplicar un operador lógico a operandos numéricos incompatibles"
+        ],
+        correcta: 3
+    },
+    {
+        pregunta: "PHP: ¿Qué error semántico es más probable en el siguiente bucle si $x no ha sido definida?\n\nCódigo:\n\n<?php\nwhile ($x < 5) {\n    echo $x;\n}\n?>",
+        opciones: [
+            "Error semántico por posible uso de variable no inicializada",
+            "Error lógico por salida repetitiva",
+            "Error léxico",
+            "Error sintáctico"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué se verifica semánticamente al evaluar una expresión aritmética?",
+        opciones: [
+            "La optimización de la expresión",
+            "La correcta escritura de los símbolos",
+            "La asociación de operadores",
+            "La compatibilidad de tipos entre operandos y operadores"
+        ],
+        correcta: 3
+    },
+    {
+        pregunta: "¿Qué aspecto semántico se relaciona con el control de tipos implícitos y explícitos?",
+        opciones: [
+            "El reconocimiento de tokens complejos",
+            "Las reglas de conversión y compatibilidad de tipos",
+            "La generación de código intermedio",
+            "La estructura del árbol sintáctico"
+        ],
+        correcta: 1
+    },
+    {
+        pregunta: "C: ¿Cuál es el error en la siguiente instrucción si 'y' no está declarada?\n\nCódigo:\n\nint x = y + 5;",
+        opciones: [
+            "Error sintáctico",
+            "Error semántico por uso de variable no declarada",
+            "Error léxico",
+            "Error de ejecución"
+        ],
+        correcta: 1
+    },
+    {
+        pregunta: "¿Qué información semántica suele asociarse a un identificador en la tabla de símbolos?",
+        opciones: [
+            "La posición exacta en memoria durante la ejecución",
+            "La cantidad de veces que se utiliza en el programa",
+            "El número de líneas de código donde aparece",
+            "El tipo de dato, el ámbito y otros atributos relevantes"
+        ],
+        correcta: 3
+    },
+    {
+        pregunta: "Python: ¿Qué tipo de error podría señalar un analizador semántico estricto en el siguiente código?\n\nCódigo:\n\nx = True\ny = 3\nresultado = x * y",
+        opciones: [
+            "Error sintáctico",
+            "Error semántico por uso no previsto de tipos en una operación aritmética",
+            "Error lógico",
+            "Error léxico"
+        ],
+        correcta: 1
+    },
+    {
+        pregunta: "¿Por qué es importante el control de tipos en el análisis semántico?",
+        opciones: [
+            "Para acelerar el proceso de compilación",
+            "Para permitir cualquier conversión automática de datos",
+            "Para definir la estructura del árbol sintáctico",
+            "Para asegurar que las operaciones entre datos sean coherentes y válidas"
+        ],
+        correcta: 3
+    },
+
+    // --- NUEVAS PREGUNTAS (Generadas) ---
+    {
+        pregunta: "¿Qué sucede en una Gramática de Atributos si existe una dependencia circular entre los atributos de un nodo?",
+        opciones: [
+            "El compilador puede entrar en un bucle infinito al intentar calcular los valores",
+            "Se ignoran automáticamente los atributos circulares",
+            "El análisis semántico se vuelve más rápido",
+            "Los atributos se inicializan en cero por defecto"
+        ],
+        correcta: 0
+    },
+    {
+        pregunta: "En la gestión de tipos, ¿cuál es la principal ventaja de la 'Equivalencia Estructural' sobre la 'Equivalencia por Nombre'?",
+        opciones: [
+            "Es más fácil de implementar para el compilador",
+            "Permite que dos tipos sean compatibles si tienen la misma estructura, aunque sus nombres sean distintos",
+            "Requiere menos memoria en tiempo de ejecución",
+            "Evita que el programador use alias de tipos"
+        ],
+        correcta: 1
+    },
+    {
+        pregunta: "¿Cuál es la función del 'Enlace Estático' (Static Link) dentro de un registro de activación en la pila?",
+        opciones: [
+            "Conectar con una librería externa .dll o .so",
+            "Permitir el acceso a variables de ámbitos (scopes) superiores no globales",
+            "Mantener la conexión a la base de datos",
+            "Acelerar el proceso de recolección de basura"
+        ],
+        correcta: 1
+    },
+    {
+        pregunta: "En C++, ¿qué tipo de error semántico se produce al intentar acceder a un miembro privado de una clase desde una función externa?",
+        opciones: [
+            "Error de Sintaxis",
+            "Error de Ámbito/Visibilidad (Access Violation en tiempo de compilación)",
+            "Error de Segmentación",
+            "Advertencia (Warning) de estilo"
+        ],
+        correcta: 1
+    },
+    {
+        pregunta: "¿Cuál de estos es un ejemplo de 'Coerción de Tipos' en un lenguaje como C o Java?\n\nCódigo:\n\nint i = 5;\nfloat f = i; // i se convierte a float",
+        opciones: [
+            "Sumar un 'int' y un 'float', donde el 'int' se convierte automáticamente a 'float'",
+            "Usar un (int) para convertir un float manualmente",
+            "Cambiar el nombre de una variable en tiempo de ejecución",
+            "Declarar una variable como constante"
+        ],
+        correcta: 0
     }
 ];
 
